@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	string name;
+	double studyHours;
+
+	cout << "Please input your name: " ;
+	cin >> name ;
+	cout << "Please input your alloted time for your study hours: " ;
+	cin >> studyHours ;
+
+	cout << " " << endl;
+
+	cout << "Hello, " << name << "! " << "On the day of your test, you would be needing to study for " << studyHours << " hours." ;
+
+	_getch();
+	return 0;
+}
