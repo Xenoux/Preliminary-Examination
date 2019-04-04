@@ -1,0 +1,60 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	const double milkCartonLiters = 3.78;
+	const double costOfProductionPerLiterOfMilk = 0.38;
+	const double profitOfEachCartonOfMilk = 0.27;
+
+	double costOfProductionPerCartonOfMilk;
+	double totalAmountOfMilkProducedInTheMorning;
+	double numberOfMilkCartonsRequired;
+	double costOfProducingTheTotalAmountOfMilkProducedInTheMorning;
+	double profitGainedForProducedMilkInTheMorning;
+	
+	costOfProductionPerCartonOfMilk = milkCartonLiters*costOfProductionPerLiterOfMilk;
+	
+	cout << "Please input the total amount of milk produced this morning in liters in numerical value (Please exclude the word 'liters'.): " ;
+	cin >> totalAmountOfMilkProducedInTheMorning ;
+
+	cout << " " << endl;
+
+	numberOfMilkCartonsRequired = totalAmountOfMilkProducedInTheMorning/milkCartonLiters;
+
+	cout << "A milk carton can hold 3.78 liters of milk; therefore, " << numberOfMilkCartonsRequired << " cartons of milk are required to contain the total amount of milk produced this morning, which is " << totalAmountOfMilkProducedInTheMorning << " liters." ;
+	
+	cout << " " << endl;
+	cout << " " << endl;
+
+	costOfProducingTheTotalAmountOfMilkProducedInTheMorning = costOfProductionPerCartonOfMilk*numberOfMilkCartonsRequired;
+	
+	cout << "(I) The cost of producing the total amount of milk produced this morning is: " << "$" << costOfProducingTheTotalAmountOfMilkProducedInTheMorning << endl;
+	
+	profitGainedForProducedMilkInTheMorning = numberOfMilkCartonsRequired*profitOfEachCartonOfMilk;
+
+	cout << "(II) The profit gained for producing such amount of milk (" << totalAmountOfMilkProducedInTheMorning << ") is: " << "$" << profitGainedForProducedMilkInTheMorning ;
+	
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+
+	cout << "SUMMARY:" << endl;
+	cout << "--------------------------------------------------------------------------------" << endl;
+	cout << " " << endl;
+	cout << "Number of milk cartons needed:" << endl;
+	cout << numberOfMilkCartonsRequired << " milk cartons" << endl;
+	cout << " " << endl;
+	cout << "Cost of production:" << endl;
+	cout << "$" << costOfProducingTheTotalAmountOfMilkProducedInTheMorning << endl;
+	cout << " " << endl;
+	cout << "Profit made:" << endl;
+	cout << "$" << profitGainedForProducedMilkInTheMorning << endl;
+	cout << " " << endl;
+
+	_getch();
+	return 0;
+}
